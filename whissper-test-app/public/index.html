@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WHISSPER-TEST-APP</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script>
+      var el = document.getElementById('root');
+      
+      var ua = window.navigator.userAgent;
+
+      var accessMessage = '<div style="width: 600px; margin: 0 auto; text-align: center; font-size: 40px;">' +
+        '<p>Вы используете устаревший браузер.</p>' + 
+        '<p>Пожалуйста воспользуйтесь другой, более современной версией.</p>' +
+      '</div>';
+
+      if (ua.indexOf('MSIE ') !== -1) {
+        el.innerHTML = accessMessage;
+      } else if (ua.indexOf('Trident/') !== -1) {
+        el.innerHTML = accessMessage;
+      } 
+    </script>
+  </body>
+</html>
